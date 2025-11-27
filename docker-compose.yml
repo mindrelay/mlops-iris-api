@@ -2,7 +2,9 @@ services:
   mlops-iris-api:
     build:
       context: .
-      dockerfile: src/api/Dockerfile 
+      dockerfile: src/api/Dockerfile
+    deploy:
+      replicas: 3
     expose:
       - "8000"
 
